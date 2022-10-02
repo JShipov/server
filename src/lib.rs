@@ -54,6 +54,7 @@ impl Drop for ThreadPool {
     }
 }
 
+//Worker picks up code that needs to be run and runs the code in the Worker’s thread
 struct Worker {
     id: usize,
     thread: Option<thread::JoinHandle<()>>,
